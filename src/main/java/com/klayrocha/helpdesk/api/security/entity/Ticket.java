@@ -35,6 +35,16 @@ public class Ticket {
 
 	private String description;
 
+	private String solution;
+
+	public String getSolution() {
+		return solution;
+	}
+
+	public void setSolution(String solution) {
+		this.solution = solution;
+	}
+
 	private String image;
 	
 	@Transient

@@ -236,6 +236,10 @@ public class TicketController {
 			}
 			Ticket ticketCurrent = ticketService.findById(id);
 			ticketCurrent.setStatus(StatusEnum.getStatus(status));
+
+			if(status.equals("Resolved")) {
+				ticketCurrent.setSolution(ticket.getSolution()																																																																							);
+			}
 			if(status.equals("Assigned")) {
 				ticketCurrent.setAssignedUser(userFromRequest(request));
 			}
